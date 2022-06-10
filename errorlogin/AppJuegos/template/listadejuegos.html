@@ -1,0 +1,46 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{% block contenido %}
+
+ <main>
+     
+         
+    
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Desarrollador</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Lanzamiento</th>
+            <th scope="col">Puntuacion</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for n in listadejuegos %}
+          <tr>
+            <th scope="row">{{n.nombre}}</th>
+            <td>{{n.desarrollador}}</td>
+            <td>{{n.genero}}</td>
+            <td>{{n.lanzamiento}}</td>
+            <td>{{n.puntuacion}}</td>
+          </tr>
+          {%endfor%}
+            
+        </tbody>
+      </table>
+      <button>
+        <a href="reviews">Ver reviews</a>
+
+      </button>
+ </main>
+ 
+ {%endblock%}
+
+ 
+
+

@@ -1,0 +1,50 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+
+
+{% block contenido %}
+
+
+
+         <h1>aca tienen q aparecer los datos del FORMULARIO</h1>
+         <main>
+     
+         
+    
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Desarrollador</th>
+                    <th scope="col">Genero</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+        
+                  {% for n in altajuego %}
+                  <tr>
+                    <th scope="row">{{n.nombre}}</th>
+                    <td>{{n.desarrollador}}</td>
+                    <td>{{n.genero}}</td>
+                    <td><a href="{% url 'eliminaproximareview' n.id %}">Borrar</a></td>
+                    
+                  </tr>
+                  {%endfor%}
+                    
+                </tbody>
+              </table>
+              <button>
+                <a href="agregarjuegos">Agregar otra review</a>
+
+              </button>
+         </main>
+         
+
+
+ 
+    
+{%endblock%}

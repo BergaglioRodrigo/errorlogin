@@ -1,0 +1,32 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{% block contenido %}
+
+    <h1>los trucos agregados van a aparecer en trucos</h1>
+    <form style="text-align: center ;" action="{% url 'editartrucos' trucos.id %}" method="POST">
+        {% csrf_token %}
+        <p>Juego</p>
+        {{miformulario.juego}}
+        
+        <br><br>
+        
+        <p>Codigo</p>
+        {{miformulario.codigo}}
+        <br><br>
+        
+        <p>Accion</p>
+        {{miformulario.accion}}
+        <br><br>
+       
+                       
+        <input type="submit" value="Enviar">
+        
+        
+
+    </form>  
+
+ 
+    
+{%endblock%}

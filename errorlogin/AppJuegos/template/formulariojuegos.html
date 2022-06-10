@@ -1,0 +1,36 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{% block contenido %}
+
+    <h1>los juegos agregados van a aparecer en proximas reviews</h1>
+    <form style="text-align: center ;" action="agregarjuegos" method="POST">
+        {% csrf_token %}
+        <p>Nombre</p>
+        <input type="text" name="nombre" required>
+        <br><br>
+        <p>Desarrollador</p>
+        <input type="text" name="desarrollador" required>
+        <br><br>
+        <p>Genero</p>
+        <input type="text" name="genero" required>
+        <br><br>
+       
+                       
+        <input type="submit" value="Enviar">
+        
+        
+
+    </form>  
+
+ 
+    
+{%endblock%}
+
+
+
+
+
+
+   

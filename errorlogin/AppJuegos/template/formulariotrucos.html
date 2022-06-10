@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{% block contenido %}
+
+    <h1>los trucos agregados van a aparecer en trucos</h1>
+    <form style="text-align: center ;" action="agregartrucos" method="POST">
+        {% csrf_token %}
+        <p>Juego</p>
+        <input type="text" name="juego" required>
+        <br><br>
+        <p>Codigo</p>
+        <input type="text" name="codigo" required>
+        <br><br>
+        <p>Accion</p>
+        <input type="text" name="accion" required>
+        <br><br>
+       
+                       
+        <input type="submit" value="Enviar">
+        
+        
+
+    </form>  
+
+ 
+    
+{%endblock%}

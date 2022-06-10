@@ -1,0 +1,34 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{% block contenido %}
+
+    <h1>los juegos agregados van a aparecer en lista juegos</h1>
+    <form style="text-align: center ;" action="agregarlistajuegos" method="POST">
+        {% csrf_token %}
+        <p>Nombre</p>
+        <input type="text" name="nombre" required>
+        <br><br>
+        <p>Desarrollador</p>
+        <input type="text" name="desarrollador" required>
+        <br><br>
+        <p>Genero</p>
+        <input type="text" name="genero" required>
+        <br><br>
+        <p>lanzamiento</p>
+        <input type="date" name="lanzamiento" required>
+        <br><br>
+        <p>puntuacion</p>
+        <input type="number" name="puntuacion" required>
+        <br><br>
+                       
+        <input type="submit" value="Enviar">
+        
+        
+
+    </form>  
+
+   
+    
+{%endblock%}

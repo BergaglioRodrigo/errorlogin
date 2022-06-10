@@ -1,0 +1,46 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{% block contenido %}
+
+ <main>
+     
+         
+    {%if games%}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Desarrollador</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Lanzamiento</th>
+            <th scope="col">Puntuacion</th>
+          </tr>
+        </thead>
+        <tbody>
+
+    {%for game in games%}
+        <tr>
+            <th scope="row">{{game.nombre}}</th>
+            <td>{{game.desarrollador}}</td>
+            <td>{{game.genero}}</td>
+            <td>{{game.lanzamiento}}</td>
+            <td>{{game.puntuacion}}</td>
+          </tr>
+    {%endfor%} 
+        </tbody>
+      </table>
+    {%else%}
+      <p>no se encontraron juegos</p>
+    {%endif%}
+ </main>
+ 
+ {%endblock%}
+
+ 
+
+
+
+ 
